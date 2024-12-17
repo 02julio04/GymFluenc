@@ -1,0 +1,146 @@
+/* Sección principal */
+.how-it-works {
+    padding: 60px 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Encabezado principal */
+  .how-it-works-header {
+    margin-bottom: 40px;
+  }
+  
+  .how-it-works-header h2 {
+    font-size: 2.5rem;
+    color: #ff5555;
+    margin-bottom: 10px;
+  }
+  
+  .how-it-works-header p {
+    font-size: 1.1rem;
+    color: #ccc;
+  }
+  
+  /* Estilo de cada paso */
+  .step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  
+  .step.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  /* Imagen de cada paso */
+  .step-image {
+    flex: 1;
+    max-width: 400px; /* Máximo ancho de imagen */
+  }
+  
+  .step-image img {
+    width: 100%;
+    max-width: 300px; /* Reducción de tamaño */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .step-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Texto de cada paso */
+  .step-text {
+    flex: 1;
+    text-align: left;
+    max-width: 400px;
+  }
+  
+  .step-text h2 {
+    font-size: 1.8rem;
+    color: #ff5555;
+    margin-bottom: 10px;
+  }
+  
+  .step-text h2 span {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .step-text p {
+    font-size: 1rem;
+    color: #aaa;
+    line-height: 1.6;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  
+  /* Para pantallas medianas (tablets y más pequeñas) */
+  @media (max-width: 1024px) {
+    .step {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .step.reverse {
+      flex-direction: column; /* Alineación para reverse también */
+    }
+  
+    .step-image {
+      max-width: 300px; /* Reducir el tamaño del contenedor */
+    }
+  
+    .step-text {
+      text-align: center; /* Centra el texto */
+    }
+  }
+  
+  /* Para pantallas pequeñas (móviles) */
+  @media (max-width: 768px) {
+    .how-it-works-header h2 {
+      font-size: 2rem; /* Tamaño de fuente reducido */
+    }
+  
+    .step {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .step-image img {
+      max-width: 250px; /* Imágenes más pequeñas */
+      border-radius: 15px;
+    }
+  
+    .step-text h2 {
+      font-size: 1.5rem; /* Reducir título */
+    }
+  
+    .step-text p {
+      font-size: 0.9rem; /* Reducir tamaño del texto */
+    }
+  }
+  
+  /* Para pantallas muy pequeñas (teléfonos más pequeños) */
+  @media (max-width: 480px) {
+    .how-it-works {
+      padding: 40px 10px; /* Menos padding */
+    }
+  
+    .step-image img {
+      max-width: 200px; /* Reducir aún más la imagen */
+    }
+  
+    .step-text h2 {
+      font-size: 1.3rem;
+    }
+  
+    .step-text p {
+      font-size: 0.8rem;
+    }
+  }
+  

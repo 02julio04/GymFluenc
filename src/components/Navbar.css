@@ -1,0 +1,147 @@
+/* Navbar General */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  padding: 10px 40px;
+  background-color: rgba(17, 17, 17, 0.95);
+  border-radius: 50px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Logo SVG */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo svg {
+  height: 35px;
+  width: auto;
+}
+
+/* Menú Hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Enlaces y botón agrupados */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 1.1rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #f00;
+  text-shadow: 0px 0px 8px rgba(255, 0, 0, 0.8);
+}
+
+/* Botón Join Us Now */
+.navbar-button button {
+  background-color: #f00;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(255, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.navbar-button button:hover {
+  background-color: #d40000;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(255, 0, 0, 0.6);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar-logo svg {
+    height: 30px;
+  }
+
+  /* Mostrar el botón hamburguesa */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Ocultar enlaces y botón por defecto */
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: rgba(17, 17, 17, 0.95);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  /* Mostrar enlaces y botón cuando el menú esté activo */
+  .navbar-menu.active {
+    display: flex;
+    gap: 15px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-links li a {
+    font-size: 1rem;
+  }
+
+  /* Botón Join Us en menú hamburguesa */
+  .navbar-button button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}

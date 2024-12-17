@@ -1,0 +1,145 @@
+/* Sección principal */
+.about-us {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Título */
+  .about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f00;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  /* Descripción */
+  .about-description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 50px;
+  }
+  
+  /* Métricas */
+  .about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Permite el ajuste en pantallas pequeñas */
+  }
+  
+  .stat-item {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+  }
+  
+  .stat-item:last-child {
+    border-right: none;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .stat-item h3 span {
+    color: #f00;
+  }
+  
+  .stat-item p {
+    font-size: 1rem;
+    color: #aaa;
+    margin-top: 10px;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .about-title {
+      font-size: 2.5rem; /* Reducir el tamaño del título */
+    }
+  
+    .about-description {
+      font-size: 1.1rem; /* Ajustar tamaño del texto */
+      margin-bottom: 40px;
+    }
+  
+    .about-stats {
+      gap: 30px; /* Menor separación */
+    }
+  
+    .stat-item h3 {
+      font-size: 2rem; /* Reducir tamaño de las métricas */
+    }
+  
+    .stat-item p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Dispositivos móviles grandes */
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2rem; /* Título más pequeño */
+    }
+  
+    .about-description {
+      font-size: 1rem;
+    }
+  
+    .about-stats {
+      flex-direction: column; /* Colocar métricas en una columna */
+      gap: 20px;
+    }
+  
+    .stat-item {
+      border-right: none; /* Eliminar bordes en móviles */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 15px;
+    }
+  
+    .stat-item:last-child {
+      border-bottom: none;
+    }
+  
+    .stat-item h3 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  /* Dispositivos móviles pequeños */
+  @media (max-width: 480px) {
+    .about-title {
+      font-size: 1.8rem; /* Reducir aún más el título */
+    }
+  
+    .about-description {
+      font-size: 0.9rem; /* Reducir el tamaño del texto */
+    }
+  
+    .stat-item h3 {
+      font-size: 1.5rem; /* Tamaño pequeño para métricas */
+    }
+  
+    .stat-item p {
+      font-size: 0.8rem;
+    }
+  
+    .about-stats {
+      gap: 15px; /* Espaciado mínimo */
+    }
+  }
+  

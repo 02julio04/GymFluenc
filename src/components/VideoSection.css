@@ -1,0 +1,148 @@
+/* Contenedor principal del video */
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #000;
+    margin-top: -60px;
+  }
+  
+  /* Contenedor del video o imagen */
+  .video-container {
+    position: relative;
+    max-width: 820px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .video-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Imagen de fondo */
+  .video-cover {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: inherit;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Capa oscura */
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    transition: background-color 0.3s ease;
+  }
+  
+  .video-container:hover .video-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Botón de Play */
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.3);
+    z-index: 2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .play-button svg {
+    width: 50%;
+    height: 50%;
+    fill: rgba(255, 255, 255, 1);
+  }
+  
+  .video-container:hover .play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: rgba(255, 0, 0, 1);
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.8);
+  }
+  
+  /* Video iframe */
+  .video-iframe {
+    width: 100%;
+    height: 460px;
+    border: none;
+    border-radius: 20px;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  
+  /* Tablets y dispositivos medianos */
+  @media (max-width: 1024px) {
+    .video-container {
+      max-width: 90%; /* Ajusta el ancho */
+    }
+  
+    .video-iframe {
+      height: 400px; /* Ajusta la altura */
+    }
+  
+    .play-button {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  
+  /* Dispositivos móviles grandes */
+  @media (max-width: 768px) {
+    .video-section {
+      padding: 30px 15px; /* Reducir el padding */
+    }
+  
+    .video-container {
+      max-width: 100%; /* Ancho completo */
+    }
+  
+    .video-iframe {
+      height: 300px; /* Reducir la altura */
+    }
+  
+    .play-button {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  /* Dispositivos móviles pequeños */
+  @media (max-width: 480px) {
+    .video-section {
+      padding: 20px 10px;
+    }
+  
+    .video-container {
+      border-radius: 15px; /* Bordes más pequeños */
+    }
+  
+    .video-iframe {
+      height: 220px; /* Reducir aún más la altura */
+    }
+  
+    .play-button {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
